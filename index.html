@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🌍 Travel Planner</h1>
+
+<form id="planner">
+    <input type="text" id="destination" placeholder="Enter Destination" required>
+
+    <!-- 🎤 Voice Button -->
+    <button type="button" onclick="startVoice()">🎤 Speak Destination</button>
+
+    <input type="date" id="date" required>
+    <input type="number" id="budget" placeholder="Enter Budget" required>
+
+    <button type="submit">Plan Trip</button>
+</form>
+
+<div id="result"></div>
+
+<p id="weather"></p>
+
+<p id="suggestion"></p>
+
+<img id="placeImage" width="300" style="margin-top:20px; border-radius:10px; display:none;">
+
+<div id="map" style="height:300px; width:80%; margin:auto; margin-top:20px;"></div>
+
+<h2>📌 Saved Trips</h2>
+<ul id="tripList"></ul>
+
+<script src="script.js"></script>
+
+</body>
+</html>
