@@ -45,7 +45,6 @@ https://rudraramharshini-pixel.github.io/TRAVEL_PLANNER/
 * 🌦 Weather integration
 * 💰 Budget calculator
 * 📍 Nearby attractions suggestion
-* 🌙 Dark mode
 
 
 ## 👩‍💻 Author
