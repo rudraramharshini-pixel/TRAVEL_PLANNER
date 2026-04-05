@@ -1,122 +1,105 @@
 body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    height: 100vh;
-    overflow-x: hidden;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    transition: 1s;
 }
 
-/* 🌍 Background Slideshow */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") no-repeat center/cover;
-    
-    animation: slideshow 20s infinite;
-    z-index: -1;
-    filter: brightness(0.6);
-}
-
-/* 🎞️ Animation */
-@keyframes slideshow {
-    0% {
-        background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e"); /* Beach */
-    }
-    25% {
-        background-image: url("https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1"); /* Mountains */
-    }
-    50% {
-        background-image: url("https://images.unsplash.com/photo-1502602898657-3e91760cbb34"); /* Paris */
-    }
-    75% {
-        background-image: url("https://images.unsplash.com/photo-1512453979798-5ea266f8880c"); /* Dubai */
-    }
-    100% {
-        background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
-    }
-}
-
-/* ✨ Content Styling */
-h1 {
+.container {
     text-align: center;
-    color: white;
-    margin-top: 20px;
-}
-
-form {
-    background: rgba(255, 255, 255, 0.9);
-    width: 300px;
-    margin: auto;
     padding: 20px;
+}
+
+h1 {
+    color: white;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    color: white;
+
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
     border-radius: 15px;
-    text-align: center;
+
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.4);
 }
 
 input, button {
-    width: 90%;
     padding: 10px;
-    margin: 8px 0;
+    margin: 10px;
+    width: 80%;
     border-radius: 8px;
     border: none;
 }
 
 button {
-    background: #007BFF;
+    background: #4facfe;
     color: white;
     cursor: pointer;
 }
 
 button:hover {
-    background: #0056b3;
+    background: #00c6ff;
 }
 
-#result, #weather, #suggestion {
-    text-align: center;
-    color: white;
-    font-weight: bold;
+.place-img {
+    width: 300px;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: none;
 }
 
 #map {
-    margin-top: 20px;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
 }
 
-ul {
-    background: rgba(255,255,255,0.8);
-    width: 300px;
+/* Suggestions */
+#suggestionsBox {
+    background: white;
+    width: 80%;
     margin: auto;
     border-radius: 10px;
-    padding: 10px;
 }
-/* 📱 Mobile Responsive */
-@media (max-width: 600px) {
 
-    form {
-        width: 90%;
-    }
+#suggestionsBox div {
+    padding: 8px;
+    cursor: pointer;
+}
 
-    input, button {
-        width: 100%;
-        font-size: 16px;
-    }
+#suggestionsBox div:hover {
+    background: #eee;
+}
 
-    #map {
-        width: 95%;
-        height: 250px;
-    }
+/* 🌙 Dark Mode */
+.dark {
+    background: #121212;
+    color: white;
+}
 
-    img {
-        width: 90%;
-    }
+.dark .card {
+    background: #1e1e1e;
+    color: white;
+}
 
-    ul {
-        width: 90%;
-    }
+.dark input {
+    background: #333;
+    color: white;
+}
 
-    h1 {
-        font-size: 24px;
-    }
+.dark button {
+    background: #333;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: white;
+    padding: 10px;
 }

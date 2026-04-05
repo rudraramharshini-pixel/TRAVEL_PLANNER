@@ -3,35 +3,67 @@
 <head>
     <title>Travel Planner</title>
     <link rel="stylesheet" href="style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<h1>🌍 Travel Planner</h1>
+<div class="container">
 
-<form id="planner">
-    <input type="text" id="destination" placeholder="Enter Destination" required>
+    <h1>🌍 Travel Planner</h1>
 
-    <!-- 🎤 Voice Button -->
-    <button type="button" onclick="startVoice()">🎤 Speak Destination</button>
+    <!-- 🌙 Dark Mode -->
+    <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
 
-    <input type="date" id="date" required>
-    <input type="number" id="budget" placeholder="Enter Budget" required>
+    <!-- FORM -->
+    <div class="card">
+        <form id="planner">
+            <input type="text" id="destination" placeholder="Enter Destination" required>
 
-    <button type="submit">Plan Trip</button>
-</form>
+            <div id="suggestionsBox"></div>
 
-<div id="result"></div>
+            <button type="button" onclick="startVoice()">🎤 Speak Destination</button>
 
-<p id="weather"></p>
+            <input type="date" id="date" required>
+            <input type="number" id="budget" placeholder="Enter Budget" required>
 
-<p id="suggestion"></p>
+            <button type="submit">Plan Trip</button>
+        </form>
+    </div>
 
-<img id="placeImage" width="300" style="margin-top:20px; border-radius:10px; display:none;">
+    <!-- RESULT -->
+    <div class="card">
+        <h2>📍 Trip Details</h2>
+        <div id="result"></div>
+        <p id="weather"></p>
+        <p id="suggestion"></p>
+        <img id="placeImage" class="place-img">
+    </div>
 
-<div id="map" style="height:300px; width:80%; margin:auto; margin-top:20px;"></div>
+    <!-- MAP -->
+    <div class="card">
+        <h2>🗺️ Location Map</h2>
+        <div id="map"></div>
+    </div>
 
-<h2>📌 Saved Trips</h2>
-<ul id="tripList"></ul>
+    <!-- SAVED TRIPS -->
+    <div class="card">
+        <h2>📌 Saved Trips</h2>
+        <ul id="tripList"></ul>
+
+        <!-- 🗑️ Clear All -->
+        <button onclick="clearTrips()">🗑️ Clear All Trips</button>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Travel Planner | Developed by You 😎</p>
+</footer>
 
 <script src="script.js"></script>
 
